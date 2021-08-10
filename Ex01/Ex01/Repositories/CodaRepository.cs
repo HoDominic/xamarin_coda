@@ -41,11 +41,13 @@ namespace Ex01.Repositories
 
 
         //GET list of Documents
-        //Paste this in POSTMAN
-        //https://coda.io/apis/v1/docs
+        //API documentation of this request: https://coda.io/developers/apis/v1#operation/listDocs
+
+        //Paste this in POSTMAN : https://coda.io/apis/v1/docs
+        
 
 
-        public  static async Task<List<CodaDocument>>GetDocumentsAsync()
+        public static async Task<List<CodaDocument>>GetDocumentsAsync()
         {
             using (HttpClient client = await GetClient()) 
             {
