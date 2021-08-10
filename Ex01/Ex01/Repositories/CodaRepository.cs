@@ -65,7 +65,9 @@ namespace Ex01.Repositories
                     // 1:  I deserialize List of Objects from JSON and return it.
                     //2: I test/call the list in --> Mainpage.xaml.cs (!)
 
-                    // normal code no nested object (doesn't work because it's nested in this API!)
+                    // normal code no nested object (doesn't work because it's nested in this API!) 
+                    //uncomment this to be error free, current error is because i don't return anything.
+
                     //List<CodaDocument> documents = JsonConvert.DeserializeObject<List<CodaDocument>>(json);
                     //return documents;
 
