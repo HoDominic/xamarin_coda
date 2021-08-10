@@ -1,5 +1,6 @@
 ﻿using Ex01.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -55,8 +56,19 @@ namespace Ex01.Repositories
                 if (json != null)
                 {
                     //json --> List Documents
-                    List<CodaDocument> documents = JsonConvert.DeserializeObject<List<CodaDocument>>(json);
-                    return documents;
+
+                    //List<CodaDocument> documents = JsonConvert.DeserializeObject<List<CodaDocument>>(json);
+                  //  return documents;
+
+
+                    //deserialize object to JObject (< newtonsoft)
+                    JObject fullObject = JsonConvert.DeserializeObject<JObject>(json);
+
+                    //path to child token
+                    JToken data = fullObject.SelectToken("item");
+
+                    //this token will be deserialized to required object type
+                    return data.ToObject<> ();
 
                 }
                 else
