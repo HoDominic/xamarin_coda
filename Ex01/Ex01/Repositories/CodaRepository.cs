@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Ex01.Models;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -18,7 +20,7 @@ namespace Ex01.Repositories
 
 
         //prepare HttpClient
-        private static async Task<HttpClient> GetClient()
+       private   static async Task<HttpClient> GetClient()
         {
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Add("Accept", "application/json");
@@ -29,18 +31,50 @@ namespace Ex01.Repositories
 
             return client;
 
+
         }
+
+
+
+
 
 
         //GET list of Documents
         //https://coda.io/apis/v1/docs
 
 
+        public  static async Task<List<CodaDocument>>GetDocumentsAsync()
+        {
+            using (HttpClient client = await GetClient()) 
+            {
+                //https://coda.io/apis/v1/docs
+
+                String url = _BASEURL + "/docs";
+                string json = await client.GetStringAsync(url);
+                //json converteren naar list
+                if (json != null)
+                {
+                    //json --> List Documents
+                    List<CodaDocument> documents = JsonConvert.DeserializeObject<List<CodaDocument>>(json);
+                    return documents;
+
+                }
+                else
+                {
+                    return null;
+                }
+
+
+
+            }
+
+
+
+        }
 
 
 
 
-
-
+      
     }
 }
