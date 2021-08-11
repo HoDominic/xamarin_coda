@@ -22,8 +22,7 @@ namespace Ex01
         private async  void  TestModels()
         {
             //test the GET REQUEST without nested object
-            //printc"name" from  objects
-            ///does not work because it's nested 
+            ///does not work because it's nested in this API
             Debug.WriteLine("test models");
             List<CodaDocument> codaDocuments = await CodaRepository.GetDocumentsAsync();
             foreach(CodaDocument d in codaDocuments)

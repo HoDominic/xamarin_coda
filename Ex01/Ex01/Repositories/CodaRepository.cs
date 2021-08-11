@@ -60,40 +60,37 @@ namespace Ex01.Repositories
                 {
                     //json --> List Documents
 
-                    //HOW I NORMALLY WORK
+                   
 
                     // 1:  I deserialize List of Objects from JSON and return it.
                     //2: I test/call the list in --> Mainpage.xaml.cs (!)
 
-                    // normal code no nested object (doesn't work because it's nested in this API!) 
-                    //uncomment this to be error free, current error is because i don't return anything.
-
-                    //List<CodaDocument> documents = JsonConvert.DeserializeObject<List<CodaDocument>>(json);
-                    //return documents;
+                    // normal code no nested object 
+                    List<CodaDocument> documents = JsonConvert.DeserializeObject<List<CodaDocument>>(json);
+                    return documents;
 
 
 
 
                     //code nested Object(?)
-                    //Here I am stuck
-                    // want the same as above: A list of objects which I can test in Mainpage.xaml.cs
+                    
 
 
 
 
-                    //my own code from trying.. can delete if you want
-
+                    
                     /*
-                    deserialize object to JObject (< newtonsoft)(?)
+                    
+                   // deserialize object to JObject (< newtonsoft)(?)
                     JObject fullObject = JsonConvert.DeserializeObject<JObject>(json);
 
-                    path to child token(?)
+                    //path to child token(?)
                     JToken data = fullObject.SelectToken("items");
 
-                    this token will be deserialized to required object type (?)
+                    //this token will be deserialized to required object type (?)
                     return data.ToObject<Task<List>>();
+                    
                     */
-
 
 
 
