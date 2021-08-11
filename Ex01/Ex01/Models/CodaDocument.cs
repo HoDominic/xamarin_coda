@@ -1,33 +1,50 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace Ex01.Models
 {
     public class CodaDocument
     {
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
-        //properties : id, name, type
+        [JsonProperty("type")]
+        public string Type { get; set; }
 
+        [JsonProperty("href")]
+        public string Href { get; set; }
 
+        [JsonProperty("browserLink")]
+        public string BrowserLink { get; set; }
 
-        [JsonProperty(PropertyName = "id")]
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
-        public String Id { get; set; }
+        [JsonProperty("owner")]
+        public string Owner { get; set; }
 
+        [JsonProperty("ownerName")]
+        public string OwnerName { get; set; }
 
-        [JsonProperty(PropertyName = "name")]
+        [JsonProperty("createdAt")]
+        public DateTime CreatedAt { get; set; }
 
-        public String Name { get; set; }
+        [JsonProperty("updatedAt")]
+        public DateTime UpdatedAt { get; set; }
 
+        [JsonProperty("icon")]
+        public Icon Icon { get; set; }
 
-        [JsonProperty(PropertyName = "type")]
+        [JsonProperty("docSize")]
+        public DocSize DocSize { get; set; }
 
-        public String Type { get; set; }
+        [JsonProperty("sourceDoc")]
+        public SourceDoc SourceDoc { get; set; }
 
+        [JsonProperty("workspaceId")]
+        public string WorkspaceId { get; set; }
 
-
-
+        [JsonProperty("folderId")]
+        public string FolderId { get; set; }
     }
 }

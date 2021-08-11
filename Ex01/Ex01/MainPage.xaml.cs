@@ -16,6 +16,7 @@ namespace Ex01
         public MainPage()
         {
             InitializeComponent();
+            TestModels();
         }
 
 
@@ -27,7 +28,7 @@ namespace Ex01
             List<CodaDocument> codaDocuments = await CodaRepository.GetDocumentsAsync();
             foreach(CodaDocument d in codaDocuments)
             {
-                Debug.WriteLine(d.Name);
+                Debug.WriteLine("dit is een test",d.Name);
             }
         }
     }

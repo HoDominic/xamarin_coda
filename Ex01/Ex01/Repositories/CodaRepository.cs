@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -62,35 +63,15 @@ namespace Ex01.Repositories
 
                    
 
-                    // 1:  I deserialize List of Objects from JSON and return it.
-                    //2: I test/call the list in --> Mainpage.xaml.cs (!)
-
-                    // normal code no nested object 
-                    List<CodaDocument> documents = JsonConvert.DeserializeObject<List<CodaDocument>>(json);
-                    return documents;
+           
+                    var documents = JsonConvert.DeserializeObject<Root>(json);
+                  
+                    return documents.CodaDocuments;
 
 
 
 
-                    //code nested Object(?)
-                    
 
-
-
-
-                    
-                    /*
-                    
-                   // deserialize object to JObject (< newtonsoft)(?)
-                    JObject fullObject = JsonConvert.DeserializeObject<JObject>(json);
-
-                    //path to child token(?)
-                    JToken data = fullObject.SelectToken("items");
-
-                    //this token will be deserialized to required object type (?)
-                    return data.ToObject<Task<List>>();
-                    
-                    */
 
 
 
