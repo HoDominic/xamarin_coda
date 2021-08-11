@@ -6,5 +6,6 @@ namespace Ex01.Models
 {
     public class CodaPage
     {
+
     }
 }

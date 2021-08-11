@@ -65,13 +65,6 @@ namespace Ex01.Repositories
                   
                     return documents.CodaDocuments;
 
-
-
-
-
-
-
-
                 }
                 else
                 {
@@ -79,12 +72,17 @@ namespace Ex01.Repositories
                 }
 
 
-
             }
 
 
-
         }
+
+
+    // GET list of Pages from 1 Document
+    //public static Task<CodaPage>
+
+
+
 
 
 

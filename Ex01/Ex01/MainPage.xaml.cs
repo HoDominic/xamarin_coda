@@ -36,7 +36,7 @@ namespace Ex01
             List<CodaDocument> codaDocuments = await CodaRepository.GetDocumentsAsync();
             foreach(CodaDocument d in codaDocuments)
             {
-                Debug.WriteLine("dit is een test",d.Name);
+                Debug.WriteLine("dit is een test",d.Name,d.CreatedAt);
             }
         }
     }

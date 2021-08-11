@@ -12,8 +12,9 @@
                             <ColumnDefinition Width="45" />
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
-                        <Frame CornerRadius="7" Margin="8" BackgroundColor='{Binding ColorHex}' />
+                        <Frame CornerRadius="7" Margin="8"  />
                         <Label Grid.Column="1" Text="{Binding Name}" TextColor="Black" VerticalOptions="Center" />
+                        <Label Grid.Column="2" Text="{Binding CreatedAt}" TextColor="Black" VerticalOptions="Center" Padding="0,0,0,0" />
                     </Grid>
                 </ViewCell>
 
