@@ -16,14 +16,22 @@ namespace Ex01
         public MainPage()
         {
             InitializeComponent();
-            TestModels();
+            //TestModels();
+            LoadDocuments();
         }
+
+
+        private async void LoadDocuments()
+        {
+            lvwDocuments.ItemsSource = await CodaRepository.GetDocumentsAsync();
+        }
+
 
 
         private async  void  TestModels()
         {
             //test the GET REQUEST without nested object
-            ///does not work because it's nested in this API
+            
             Debug.WriteLine("test models");
             List<CodaDocument> codaDocuments = await CodaRepository.GetDocumentsAsync();
             foreach(CodaDocument d in codaDocuments)

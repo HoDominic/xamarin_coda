@@ -8,7 +8,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using static Ex01.Models.CodaDocumentTest;
+
 
 namespace Ex01.Repositories
 {
@@ -61,9 +61,6 @@ namespace Ex01.Repositories
                 {
                     //json --> List Documents
 
-                   
-
-           
                     var documents = JsonConvert.DeserializeObject<Root>(json);
                   
                     return documents.CodaDocuments;
