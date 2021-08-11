@@ -8,6 +8,8 @@ namespace Ex01.Models
         [JsonProperty("items")]
         public List<CodaDocument> CodaDocuments { get; set; }
 
+
+
         [JsonProperty("href")]
         public string Href { get; set; }
     }

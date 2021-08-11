@@ -52,17 +52,20 @@ namespace Ex01.Repositories
         {
             using (HttpClient client = await GetClient()) 
             {
+
+                //https://coda.io/apis/v1/docs
+
                 String url = _BASEURL + "/docs";
                 string json = await client.GetStringAsync(url);
 
                 try { 
-                       //https://coda.io/apis/v1/docs
+                       
 
                        //json convert to list
                        if (json != null)
                         {
                            //json --> List Documents
-                           var documents = JsonConvert.DeserializeObject<Root>(json);
+                           var documents = JsonConvert.DeserializeObject<CodaDocument>(json);
                            return documents.CodaDocuments;
 
                         }
@@ -83,7 +86,43 @@ namespace Ex01.Repositories
 
 
     // GET list of Pages from 1 Document
-    //public static Task<CodaPage>
+     public static  async Task<List<CodaPage>>GetPagesAsync(String documentId)
+        {
+            using (HttpClient client = await GetClient())
+            {
+                //https://coda.io/apis/v1/docs/{docId}/pages
+
+                String url = _BASEURL + $"/docs/{documentId}/pages";
+                string json = await client.GetStringAsync(url);
+
+                try
+                {
+                   
+                    //json convert to list
+                    if (json != null)
+                    {
+                        //json --> List Pages
+                        var pages = JsonConvert.DeserializeObject<CodaPage>(json);
+                        return pages.CodaPages;
+
+                    }
+                    else
+
+                    {
+                        return null;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+            }
+
+
+
+
+        }
 
 
 

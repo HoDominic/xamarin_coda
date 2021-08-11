@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ex01.MainPage">
+             x:Class="Ex01.MainPage"
+             NavigationPage.HasNavigationBar="False">
 
-    <ListView x:Name="lvwDocuments" SeparatorColor="White" >
+    <ListView x:Name="lvwDocuments" SeparatorColor="White" ItemSelected="lvwDocuments_ItemSelected" >
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
@@ -13,7 +14,7 @@
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
                         <Frame CornerRadius="7" Margin="8"  />
-                        <Label Grid.Column="1" Text="{Binding Name}" TextColor="Black" VerticalOptions="Center" />
+                        <Label Grid.Column="1" Text="{Binding Name}" TextColor="Black" VerticalOptions="Center"  />
                         <Label Grid.Column="2" Text="{Binding CreatedAt}" TextColor="Black" VerticalOptions="Center" Padding="0,0,0,0" />
                     </Grid>
                 </ViewCell>

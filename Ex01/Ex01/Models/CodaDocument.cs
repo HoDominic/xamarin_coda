@@ -1,10 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace Ex01.Models
 {
     public class CodaDocument
     {
+
+        [JsonProperty("items")]
+        public List<CodaDocument> CodaDocuments { get; set; }
+
+
         [JsonProperty("id")]
         public string Id { get; set; }
 
