@@ -52,25 +52,29 @@ namespace Ex01.Repositories
         {
             using (HttpClient client = await GetClient()) 
             {
-                //https://coda.io/apis/v1/docs
-
                 String url = _BASEURL + "/docs";
                 string json = await client.GetStringAsync(url);
-                //json convert to list
-                if (json != null)
+
+                try { 
+                       //https://coda.io/apis/v1/docs
+
+                       //json convert to list
+                       if (json != null)
+                        {
+                           //json --> List Documents
+                           var documents = JsonConvert.DeserializeObject<Root>(json);
+                           return documents.CodaDocuments;
+
+                        }
+                       else
+
+                        {
+                            return null;
+                        }
+                }catch(Exception ex)
                 {
-                    //json --> List Documents
-
-                    var documents = JsonConvert.DeserializeObject<Root>(json);
-                  
-                    return documents.CodaDocuments;
-
+                    throw ex;
                 }
-                else
-                {
-                    return null;
-                }
-
 
             }
 
