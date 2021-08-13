@@ -26,6 +26,8 @@ namespace Ex01.Views
 
             MyDocument = selected;
 
+            
+
             ShowPagesFromDocument();
 
 
@@ -40,6 +42,23 @@ namespace Ex01.Views
             List<CodaPage>codaPages = await CodaRepository.GetPagesAsync(MyDocument.Id);
             //weergeven in de juiste listView
             lvwCodaPages.ItemsSource = codaPages;
+        }
+
+
+        //selecteren van CodaPage
+        private void lvwCodaPages_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if(lvwCodaPages.SelectedItem != null)
+            {
+                CodaPage codaPageSelected = (CodaPage)lvwCodaPages.SelectedItem;
+                Navigation.PushAsync(new CodaDetailsPage(
+                MyDocument,codaPageSelected));
+
+                //deselecteren
+                lvwCodaPages.SelectedItem = null;
+
+
+            }
         }
     }
 }

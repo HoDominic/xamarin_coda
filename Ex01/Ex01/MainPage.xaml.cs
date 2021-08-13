@@ -17,10 +17,15 @@ namespace Ex01
         public MainPage()
         {
             InitializeComponent();
-            //TestModels();
-            LoadDocuments();
+            TestModels();
+           LoadDocuments();
+
+
+          
+
         }
 
+       
 
         private async void LoadDocuments()
         {
@@ -31,7 +36,7 @@ namespace Ex01
 
         private async  void  TestModels()
         {
-            //test the GET REQUEST without nested object
+            //test the GET Documents
             
             Debug.WriteLine("test models");
             List<CodaDocument> codaDocuments = await CodaRepository.GetDocumentsAsync();
@@ -42,7 +47,10 @@ namespace Ex01
 
 
             // TEST we nemen de eerste document
+        
             CodaDocument codaDocument = codaDocuments[0];
+
+            //Get pages in a document
             List<CodaPage> codaPages = await CodaRepository.GetPagesAsync(codaDocument.Id);
             foreach (CodaPage p in codaPages)
             {
@@ -50,8 +58,34 @@ namespace Ex01
                 Debug.WriteLine(p.Name);
             }
 
+            //test3: toevoegen  van document
+
+            CodaDocument newDocument = new CodaDocument() { Name = "demo nieuw document" };
+            await CodaRepository.AddDocumentsAsync(newDocument, codaDocument.Id, "titel" );
+
+
+            //test4: update document (niet mogelijk via deze API..)
+            CodaDocument firstDocument = codaDocuments[0];
+            firstDocument.Name = "Updated Name";
+            //await CodaRepository.UpdateDocumentsAsync(firstDocument);
+
+            //test5: updaten van 1 pagina
+            CodaPage firstPage = codaPages[0];
+            firstPage.Name = "Updated page name";
+            
+
+
+
+
 
         }
+
+        //
+        private void ButtonAddDocument_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SingleDocumentPage());
+        }
+
 
         private void lvwDocuments_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
@@ -65,5 +99,7 @@ namespace Ex01
                 lvwDocuments.SelectedItem = null;
             }
         }
+
+      
     }
 }

@@ -10,6 +10,8 @@ namespace Ex01.Models
         [JsonProperty("items")]
         public List<CodaDocument> CodaDocuments { get; set; }
 
+        //public CodaDocument SingleCodaDocument { get; set; }
+
 
         [JsonProperty("id")]
         public string Id { get; set; }
@@ -17,20 +19,12 @@ namespace Ex01.Models
         [JsonProperty("type")]
         public string Type { get; set; }
 
-        [JsonProperty("href")]
-        public string Href { get; set; }
-
-        [JsonProperty("browserLink")]
-        public string BrowserLink { get; set; }
-
         [JsonProperty("name")]
         public string Name { get; set; }
 
-        [JsonProperty("owner")]
-        public string Owner { get; set; }
+        [JsonProperty("href")]
+        public string Href { get; set; }
 
-        [JsonProperty("ownerName")]
-        public string OwnerName { get; set; }
 
         [JsonProperty("createdAt")]
         public DateTime CreatedAt { get; set; }
