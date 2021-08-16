@@ -7,25 +7,25 @@
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>
                 <RowDefinition />
-                <RowDefinition Height="10"/>
+                <RowDefinition Height="11"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Grid HeightRequest="600">
+            <Grid >
             <Frame Padding="0" BackgroundColor="Black">
-            <Image Opacity="0.7" Source=" https://thumb.tildacdn.com/tild3065-3064-4232-b534-633362373638/-/format/webp/coda_people.png" Aspect="AspectFill"/>
+            <Image Opacity="0.5" Source=" https://thumb.tildacdn.com/tild3065-3064-4232-b534-633362373638/-/format/webp/coda_people.png" Aspect="AspectFill"/>
             </Frame>
-            <StackLayout VerticalOptions="EndAndExpand" Margin="15,15,15,15">
-                <Label Text="The doc that brings everything together" TextColor="White" FontSize="20" Margin="15" /> 
+            <StackLayout VerticalOptions="EndAndExpand" Margin="15,15,15,65">
+                <Label Text="The doc that brings everything together" TextColor="#FFFFFF" FontSize="25" Margin="15" FontAttributes="None" /> 
             </StackLayout>
             </Grid>
             <BoxView Grid.Row="1" BackgroundColor="#F46A54"/>
-            <Grid Grid.Row="2" RowSpacing="0">
+            <Grid Grid.Row="2" RowSpacing="0" >
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition />
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-
+               
                 <Frame x:Name="frmMainPage" Grid.Row="0" Margin="1" Padding="0" OutlineColor="#F46A54" >
                     <Label Text="Documents" TextColor="#323232" FontAttributes="Bold" VerticalOptions="Center" Margin="16,0" />
                 </Frame>
