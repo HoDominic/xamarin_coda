@@ -124,6 +124,51 @@ namespace Ex01.Repositories
 
         }
 
+        //PUT UpDate a Page
+
+
+        public async static Task UpdatePagesAsync(CodaPage updatedPage)
+        {
+            //deze methode voegt een nieuwe document toe 
+            using (HttpClient client = await GetClient())
+            {
+
+
+                //https://coda.io/apis/v1/docs/{docId}/pages
+
+                String url = _BASEURL + $"/docs/pages/{updatedPage.Id}";
+
+
+                try
+                {
+
+                    //stap2 document moet meegestuurd worden met url
+                    //
+                    //Serialize c# object to JSON with newtonsoft
+                    String json = JsonConvert.SerializeObject(updatedPage);
+
+                    //build stringContent with serialized json object
+                    HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
+                    var response = await client.PutAsync(url, content);
+
+                    //controle: is het gelukt?
+                    if (response.IsSuccessStatusCode == false)
+                    {
+
+                        throw new Exception("Updaten van document niet geslaagd");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+
+
+
+            }
+
+
+        }
 
         //GET 1 Page by DocId,PageId
 
@@ -147,7 +192,7 @@ namespace Ex01.Repositories
                         
 
                         var page = JsonConvert.DeserializeObject<CodaPage>(json);
-                        return page.SingleCodaPage;
+                        return page.CodaSinglePage;
 
                     }
                     else
@@ -201,49 +246,7 @@ namespace Ex01.Repositories
 
         }
 
-        //PUT UpDate a Document
-
-        /*
-        public async static Task UpdateDocumentsAsync(CodaDocument updatedDocument)
-        {
-            //deze methode voegt een nieuwe document toe 
-            using (HttpClient client = await GetClient())
-            {
-
-
-                //https://coda.io/apis/v1/docs/{docId}/pages
-
-                String url = _BASEURL + $"/docs/{updatedDocument.Id}";
-              
-                try
-                {
-                  
-                    //stap2 document moet meegestuurd worden met url
-                    //
-                    //Serialize c# object to JSON with newtonsoft
-                    String json = JsonConvert.SerializeObject(updatedDocument);
-
-                    //build stringContent with serialized json object
-                    HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
-                    var response = await client.PutAsync(url, content);
-
-                    //controle: is het gelukt?
-                    if (response.IsSuccessStatusCode == false)
-                    {
-
-                        throw new Exception("Updaten van document niet geslaagd");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-
-
-
-            }
-        }
-        */
+        
 
 
 

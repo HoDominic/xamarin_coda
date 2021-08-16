@@ -1,17 +1,18 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+
+using Xamarin.Forms;
 
 namespace Ex01.Models
 {
-    public class CodaPage
+    public class CodaPageSingle
     {
-
+        /*
         [JsonProperty("items")]
-        public List<CodaPage> CodaPages { get; set; }
-
-        public CodaPage CodaSinglePage { get; set; }
+        public CodaPage SingleCodaPage { get; set; }
 
         [JsonProperty("id")]
         public String Id { get; set; }
@@ -22,7 +23,6 @@ namespace Ex01.Models
 
         [JsonProperty("subtitle")]
         public String Subtitle { get; set; }
-
-        public CodaPage codaPage  {get; set; }
+        */
     }
 }
