@@ -1,12 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Ex01.Views.LandingPage">
+             x:Class="Ex01.Views.LandingPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="10"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0 " Source=" https://thumb.tildacdn.com/tild3065-3064-4232-b534-633362373638/-/format/webp/coda_people.png" Aspect="AspectFill"/>
+            <BoxView Grid.Row="1" BackgroundColor="#F46A54"/>
+            <Grid Grid.Row="2" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition />
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Frame x:Name="frmMainPage" Grid.Row="0" Margin="1" Padding="0" OutlineColor="#F46A54" >
+                    <Label Text="Documents" TextColor="#323232" FontAttributes="Bold" VerticalOptions="Center" Margin="16,0" />
+                </Frame>
+                <Frame x:Name="frmLocations" Grid.Row="1" Margin="1" Padding="0" OutlineColor="#F46A54" >
+                    <Label Text="Locations" TextColor="#323232" FontAttributes="Bold" VerticalOptions="Center" Margin="16,0"/>
+                </Frame>
+                <Frame x:Name="frmPage" Grid.Row="2" Margin="1" Padding="0" OutlineColor="#F46A54" >
+                    <Label Text="Extra page" TextColor="#323232" FontAttributes="Bold" VerticalOptions="Center" Margin="16,0"/>
+                </Frame>
+
+            </Grid>
+
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

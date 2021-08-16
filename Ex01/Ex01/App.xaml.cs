@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ex01.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace Ex01
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new LandingPage());
         }
 
         protected override void OnStart()
