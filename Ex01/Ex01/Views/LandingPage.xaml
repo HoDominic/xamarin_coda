@@ -10,7 +10,14 @@
                 <RowDefinition Height="10"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Image Grid.Row="0 " Source=" https://thumb.tildacdn.com/tild3065-3064-4232-b534-633362373638/-/format/webp/coda_people.png" Aspect="AspectFill"/>
+            <Grid HeightRequest="600">
+            <Frame Padding="0" BackgroundColor="Black">
+            <Image Opacity="0.7" Source=" https://thumb.tildacdn.com/tild3065-3064-4232-b534-633362373638/-/format/webp/coda_people.png" Aspect="AspectFill"/>
+            </Frame>
+            <StackLayout VerticalOptions="EndAndExpand" Margin="15,15,15,15">
+                <Label Text="The doc that brings everything together" TextColor="White" FontSize="20" Margin="15" /> 
+            </StackLayout>
+            </Grid>
             <BoxView Grid.Row="1" BackgroundColor="#F46A54"/>
             <Grid Grid.Row="2" RowSpacing="0">
                 <Grid.RowDefinitions>
