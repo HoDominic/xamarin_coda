@@ -16,30 +16,42 @@
                                 
 
                             </ViewCell.ContextActions >
-                                    <Grid>
+                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="45" />
                             <ColumnDefinition />
+
+                                   
                         </Grid.ColumnDefinitions>
+                                
+                                   
+                                
 
-                            
 
 
 
-                                        <Frame CornerRadius="7" Margin="8"  />
+
+                 <Frame CornerRadius="7" Margin="8"  />
                         <Label Grid.Column="1" Text="{Binding Name}" TextColor="Black" FontSize="30" VerticalOptions="Center"  />
                         <Label Grid.Column="2" Text="{Binding CreatedAt}" TextColor="Black"  FontSize="15"  VerticalOptions="Center" Padding="0,0,0,0" />
-                        
-                    </Grid>
+                            </Grid>
+                            
                 </ViewCell>
 
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
 
-            <Button  x:Name="ButtonAddDocument" Grid.Row="2" VerticalOptions="Center"  Margin="12,0" FontSize="20" BackgroundColor="Black" TextColor="white" Text="Add Document" Clicked="ButtonAddDocument_Clicked"></Button>
+           
+            <Button  x:Name="ButtonAddDocument"  VerticalOptions="Center"  Margin="0,50,0,0" FontSize="10" BackgroundColor="Black" TextColor="white" Text="Add Document" Clicked="ButtonAddDocument_Clicked"></Button>
+            <Button  x:Name="ButtonDeleteDocument"  VerticalOptions="End"  Margin="0,0" FontSize="20" BackgroundColor="Black" TextColor="white" Text="Delete Document" Clicked="ButtonDeleteDocument_Clicked"></Button>
+
             
+          
         </Grid>
+
+        
+
     </Frame>
 
 </ContentPage>

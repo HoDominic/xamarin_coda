@@ -100,6 +100,9 @@ namespace Ex01
             }
         }
 
-      
+        private void ButtonDeleteDocument_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

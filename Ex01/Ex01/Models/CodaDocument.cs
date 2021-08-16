@@ -10,7 +10,9 @@ namespace Ex01.Models
         [JsonProperty("items")]
         public List<CodaDocument> CodaDocuments { get; set; }
 
-        
+        public CodaDocument codaDocument { get; set; }
+
+
 
 
         [JsonProperty("id")]
