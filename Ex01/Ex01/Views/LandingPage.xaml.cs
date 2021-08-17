@@ -16,16 +16,16 @@ namespace Ex01.Views
         {
             InitializeComponent();
 
-            //Gestures toevoegen aan frames voor navigatie tussen pagina's
+            //Gestures to  frames for navigation
 
-            //Navigatie naar Locations
+            //Navigation to documents
             TapGestureRecognizer tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.Tapped += TapGestureRecognizer_Tapped; ;
             frmMainPage.GestureRecognizers.Add(tapGestureRecognizer);
 
 
 
-            //Navigatie naar Movies
+            //Navigation second page
             TapGestureRecognizer tapGestureRecognizer1 = new TapGestureRecognizer();
             tapGestureRecognizer1.Tapped += TapGestureRecognizer1_Tapped; ;
             frmLocations.GestureRecognizers.Add(tapGestureRecognizer1);
