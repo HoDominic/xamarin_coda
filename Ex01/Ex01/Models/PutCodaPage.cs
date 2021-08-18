@@ -10,13 +10,13 @@ namespace Ex01.Models
 
 
 
-       {
+     /*  
     "name": "<string>",
     "subtitle": "<string>",
     "iconName": "<string>",
     "imageUrl": "<string>"
-        }
-
+        
+*/
 
 
 
