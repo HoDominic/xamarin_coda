@@ -20,8 +20,8 @@ namespace Ex01
             TestModels();
            LoadDocuments();
 
+            
 
-          
 
         }
 
@@ -60,8 +60,8 @@ namespace Ex01
 
             //test3: toevoegen  van document
 
-            CodaDocument newDocument = new CodaDocument() { Name = "demo nieuw document" };
-            await CodaRepository.AddDocumentsAsync(newDocument, codaDocument.Id, "titel" );
+            //CodaDocument newDocument = new CodaDocument() { Name = "demo nieuw document" };
+            //await CodaRepository.AddDocumentsAsync(newDocument, codaDocument.Id, "testtitel" );
 
 
             //test4: update document (niet mogelijk via deze API..)
