@@ -10,19 +10,18 @@ namespace Ex01.Models
 {
     public class CodaPageSingle
     {
-        /*
-        [JsonProperty("items")]
-        public CodaPage SingleCodaPage { get; set; }
+        
+        
 
         [JsonProperty("id")]
-        public String Id { get; set; }
+        public string Id { get; set; }
 
         [JsonProperty("name")]
-        public String Name { get; set; }
+        public string Name { get; set; }
 
 
         [JsonProperty("subtitle")]
-        public String Subtitle { get; set; }
-        */
+        public string Subtitle { get; set; }
+        
     }
 }
