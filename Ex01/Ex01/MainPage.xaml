@@ -4,55 +4,6 @@
              x:Class="Ex01.MainPage"
              NavigationPage.HasBackButton="true">
     
-    
-    <!--<Frame BackgroundColor="WhiteSmoke" Margin="8" Padding="0">
-        <Grid>
-            <ListView x:Name="lvwDocuments" SeparatorColor="White" ItemSelected="lvwDocuments_ItemSelected" >
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                        <ViewCell >
-                            <ViewCell.ContextActions >
-                                <MenuItem Text="Here you can see my documents"  />
-                                
-
-                            </ViewCell.ContextActions >
-                     <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="45" />
-                            <ColumnDefinition />
-
-                                   
-                        </Grid.ColumnDefinitions>
-                                
-                                   
-                                
-
-
-
-
-
-                 <Frame CornerRadius="7" Margin="8"  />
-                        <Label Grid.Column="1" Text="{Binding Name}" TextColor="Black" FontSize="30" VerticalOptions="Center"  />
-                        <Label Grid.Column="2" Text="{Binding CreatedAt}" TextColor="Black"  FontSize="15"  VerticalOptions="Center" Padding="0,0,0,0" />
-                            </Grid>
-                            
-                </ViewCell>
-
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
-
-           
-            <Button  x:Name="ButtonAddDocument"  VerticalOptions="EndAndExpand"  Margin="0,0,0,0" FontSize="10" BackgroundColor="Black" TextColor="white" Text="Add Document" Clicked="ButtonAddDocument_Clicked"></Button>
-           
-
-            
-          
-        </Grid>
-
-        
-
-    </Frame>-->
 
 
 
