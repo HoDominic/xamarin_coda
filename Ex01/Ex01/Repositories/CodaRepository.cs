@@ -216,18 +216,18 @@ namespace Ex01.Repositories
 
         //POST (add) new Document
 
-        public async static Task AddDocumentsAsync(CodaDocument newDocument, String docId,String title)
+        public async static Task AddDocumentsAsync(CodaDocument newDocument)
         {
            using (HttpClient client = await GetClient()) 
            { 
                //voeg een niewe CodaDocument toe aan de documentId als parameter
                try
            {
-               String url = _BASEURL + $"/docs";
+               string url = _BASEURL + $"/docs";
 
                //stap2 document moet meegestuurd worden met url
                //document --> json
-               String json = JsonConvert.SerializeObject(newDocument);
+               string json = JsonConvert.SerializeObject(newDocument);
                HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");
                var response = await client.PostAsync(url, content);
 
@@ -246,8 +246,12 @@ namespace Ex01.Repositories
 
         }
 
+        //DELETE  new Document
 
        
+
+
+
 
 
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Ex01.Models;
+using Ex01.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +14,36 @@ namespace Ex01.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SingleDocumentPage : ContentPage
     {
+        //info bijhouden
+
+        
+
+
         public SingleDocumentPage()
         {
             InitializeComponent();
+
+            
+
+            
+        }
+
+        private void btnCancel_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
+
+        private async void  btnSave_Clicked(object sender, EventArgs e)
+        {
+            //opslaan nieuwe CodaDocument
+            String name = editName.Text;
+
+            CodaDocument newCodaDocument = new CodaDocument();
+            newCodaDocument.Name  = name;
+
+           await CodaRepository.AddDocumentsAsync(newCodaDocument, "new document");
+
+            Navigation.PushAsync(new MainPage());
         }
     }
 }

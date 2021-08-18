@@ -20,12 +20,21 @@ namespace Ex01
             TestModels();
            LoadDocuments();
 
+
+            //toevoegen van document
+            TapGestureRecognizer tapGesture = new TapGestureRecognizer();
+            tapGesture.Tapped += TapGesture_Tapped;
+            lblAddDocument.GestureRecognizers.Add(tapGesture);
             
 
 
         }
 
-       
+        private void TapGesture_Tapped(object sender, EventArgs e)
+        {
+            
+            Navigation.PushAsync(new SingleDocumentPage());
+        }
 
         private async void LoadDocuments()
         {
@@ -80,11 +89,8 @@ namespace Ex01
 
         }
 
-        //
-        private void ButtonAddDocument_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new SingleDocumentPage());
-        }
+      
+      
 
 
         private void lvwDocuments_ItemSelected(object sender, SelectedItemChangedEventArgs e)

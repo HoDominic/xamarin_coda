@@ -15,19 +15,21 @@
         </Grid.RowDefinitions>
 
         <StackLayout>
-            <Frame BackgroundColor="white" Margin="8" Padding="0">
+            <Frame BackgroundColor="#F47562" Margin="8" Padding="0">
+             
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="35" />
                         <RowDefinition />
                         <RowDefinition Height="35" />
                     </Grid.RowDefinitions>
-                    <Label x:Name="lblListName" Text="(list name)" TextColor="#333333" FontAttributes="Bold" VerticalOptions="Center" Margin="12,0" />
+                   
+                    <!--<Label x:Name="lblListName" Text="(list name)" TextColor="#333333" FontAttributes="Bold" VerticalOptions="Center" Margin="12,0" />-->
                     <!--<StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Center">
                         <Label Text="Closed cards:" FontSize="Micro" VerticalOptions="Center"  />
                         <Switch x:Name="switchClosedCards" Toggled="switchClosedCards_Toggled" />
                     </StackLayout>-->
-
+                   
                     <ListView x:Name="lvwDocuments" Grid.Row="1" BackgroundColor="#F47562" RowHeight="65" SeparatorColor="Transparent" ItemSelected="lvwDocuments_ItemSelected">
                         <ListView.ItemTemplate>
                             <DataTemplate>
@@ -59,7 +61,7 @@
                             </DataTemplate>
                         </ListView.ItemTemplate>
                     </ListView>
-                    <Label x:Name="lblAddCard" Grid.Row="2" VerticalOptions="Center" Margin="12,0" TextColor="#333333" Text="Add a card..." />
+                    <Label x:Name="lblAddDocument" Grid.Row="2" VerticalOptions="Center" Margin="12,0" TextColor="#333333" Text="Add a card..." />
                 </Grid>
             </Frame>
 
