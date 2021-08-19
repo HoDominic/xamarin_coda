@@ -24,11 +24,7 @@
                         <RowDefinition Height="35" />
                     </Grid.RowDefinitions>
                    
-                    <!--<Label x:Name="lblListName" Text="(list name)" TextColor="#333333" FontAttributes="Bold" VerticalOptions="Center" Margin="12,0" />-->
-                    <!--<StackLayout Orientation="Horizontal" HorizontalOptions="End" VerticalOptions="Center">
-                        <Label Text="Closed cards:" FontSize="Micro" VerticalOptions="Center"  />
-                        <Switch x:Name="switchClosedCards" Toggled="switchClosedCards_Toggled" />
-                    </StackLayout>-->
+               
                    
                     <ListView x:Name="lvwDocuments" Grid.Row="1" BackgroundColor="#F47562" RowHeight="65" SeparatorColor="Transparent" ItemSelected="lvwDocuments_ItemSelected">
                         <ListView.ItemTemplate>
@@ -47,7 +43,7 @@
                                             </Grid.ColumnDefinitions>
                                             <Label Text="{Binding Name}" FontAttributes="Bold" VerticalOptions="Center" TextColor="#333333" FontSize="20" />
                                             <!--handle this button click to create a PUT request that changes the card's closed state-->
-                                            <Button Text="CLOSE" FontSize="Micro" x:Name="btnCloseCard" Grid.Column="1" Grid.RowSpan="2" VerticalOptions="Center" HorizontalOptions="Center" Clicked="btnCloseCard_Clicked"  />
+                                            <Button Text="CLOSE" FontSize="Micro" x:Name="btnCloseDocument" Grid.Column="1" Grid.RowSpan="2" VerticalOptions="Center" HorizontalOptions="Center" Clicked="btnCloseDocument_Clicked"  />
                                             <StackLayout Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal">
 
                                                 <Label Text="{Binding CreatedAt}" TextColor="#333333" FontSize="12"  VerticalOptions="Start" />

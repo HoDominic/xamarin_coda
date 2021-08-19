@@ -111,7 +111,7 @@ namespace Ex01
 
         }
 
-        private async void btnCloseCard_Clicked(object sender, EventArgs e)
+        private async void btnCloseDocument_Clicked(object sender, EventArgs e)
         {
             CodaDocument codaDocument = (sender as Button).BindingContext as CodaDocument;
             await CodaRepository.DeleteDocumentsAsync(codaDocument.Id);
