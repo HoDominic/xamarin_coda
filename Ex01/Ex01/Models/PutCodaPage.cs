@@ -8,15 +8,15 @@ namespace Ex01.Models
     {
 
 
+        public string Name { get; set; }
+        public string Subtitle { get; set; }
 
+        public string IconName { get; set; }
 
-     /*  
-    "name": "<string>",
-    "subtitle": "<string>",
-    "iconName": "<string>",
-    "imageUrl": "<string>"
-        
-*/
+        public string ImageUrl { get; set; }
+
+     
+    
 
 
 
