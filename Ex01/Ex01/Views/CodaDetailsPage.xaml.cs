@@ -35,7 +35,7 @@ namespace Ex01.Views
 
 
 
-        private async void loadPage()
+        private  void loadPage()
         {
             //CodaPage codaSinglePage= await CodaRepository.GetCodaPageByIdAsync(MyDocument.Id, MyPage.Id);
             //weergeven in de juiste 

@@ -43,7 +43,8 @@ namespace Ex01.Views
 
            await CodaRepository.AddDocumentsAsync(newCodaDocument, "new document");
 
-            Navigation.PushAsync(new MainPage());
+          await  Navigation.PopAsync();
+                
         }
     }
 }

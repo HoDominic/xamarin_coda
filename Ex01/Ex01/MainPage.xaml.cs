@@ -89,8 +89,14 @@ namespace Ex01
 
         }
 
-      
-      
+
+        //uitvoeren wanneer we naar deze pagina gaan
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            LoadDocuments();
+        }
+
 
 
         private void lvwDocuments_ItemSelected(object sender, SelectedItemChangedEventArgs e)
