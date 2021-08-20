@@ -28,7 +28,7 @@ namespace Ex01.Views
             //Navigation second page
             TapGestureRecognizer tapGestureRecognizer1 = new TapGestureRecognizer();
             tapGestureRecognizer1.Tapped += TapGestureRecognizer1_Tapped; ;
-            frmLocations.GestureRecognizers.Add(tapGestureRecognizer1);
+            frmAccount.GestureRecognizers.Add(tapGestureRecognizer1);
 
             TapGestureRecognizer tapGestureRecognizer2 = new TapGestureRecognizer();
             tapGestureRecognizer2.Tapped += TapGestureRecognizer2_Tapped; ;
@@ -43,7 +43,7 @@ namespace Ex01.Views
 
         private void TapGestureRecognizer1_Tapped(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Navigation.PushAsync(new AccountPage());
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
