@@ -43,9 +43,11 @@ namespace Ex01
 
 
 
-        private async  void  TestModels()
+        private async  Task TestModels()
         {
             //test the GET Documents
+
+            Account account = await CodaRepository.GetAccountInfoAsync();
             
             Debug.WriteLine("test models");
             List<CodaDocument> codaDocuments = await CodaRepository.GetDocumentsAsync();

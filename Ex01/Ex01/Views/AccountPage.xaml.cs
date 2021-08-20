@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ex01.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,16 @@ namespace Ex01.Views
     {
         public AccountPage()
         {
-           
+            InitializeComponent();
+            
         }
+
+
+
+
+
+      
     }
+    
+
 }

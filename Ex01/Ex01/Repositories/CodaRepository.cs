@@ -278,6 +278,40 @@ namespace Ex01.Repositories
 
         }
 
+        // GET Account INFO
+
+
+        public static async Task <Account> GetAccountInfoAsync()
+        {
+            using (HttpClient client = await GetClient())
+            {
+                //https://coda.io/apis/v1/whoami
+
+                string url = _BASEURL + "/whoami";
+                
+                try
+                {
+                    string json = await client.GetStringAsync(url);
+
+                    Account account = JsonConvert.DeserializeObject<Account>(json);
+
+                    return account;
+
+                }
+                catch (Exception ex)
+                {
+
+                    throw ex;
+                }
+
+
+
+
+            }
+
+
+        }
+
 
 
 
