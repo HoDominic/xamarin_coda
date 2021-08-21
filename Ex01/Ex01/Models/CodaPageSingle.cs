@@ -21,7 +21,7 @@ namespace Ex01.Models
 
 
         [JsonProperty("subtitle")]
-        public string Subtitle { get; set; }
+        public string Subtitle { get; set; } 
         
     }
 }

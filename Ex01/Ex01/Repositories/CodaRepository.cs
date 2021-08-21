@@ -184,7 +184,7 @@ namespace Ex01.Repositories
         {
             using (HttpClient client = await GetClient())
             {
-                //https://coda.io/apis/v1/docs/{docId}/pages/PageId
+                //https://coda.io/apis/v1/docs/{docId}/pages/{PageId}
 
                 String url = _BASEURL + $"/docs/{documentId}/pages/{PageId}";
                 string json = await client.GetStringAsync(url);
@@ -223,7 +223,7 @@ namespace Ex01.Repositories
 
         //POST (add) new Document
 
-        public async static Task AddDocumentsAsync(CodaDocument newDocument ,  string title)
+        public async static Task AddDocumentsAsync(  string title)
         {
            using (HttpClient client = await GetClient()) 
            { 
@@ -234,7 +234,7 @@ namespace Ex01.Repositories
 
                     //stap2 document moet meegestuurd worden met url
                     //document --> json
-                    var postCodaDocument = new PostCodaDocument { Title = newDocument.Name , TimeZone= "Europe/Brussels" };
+                    var postCodaDocument = new PostCodaDocument { Title = title , TimeZone= "Europe/Brussels" };
                     
                string json = JsonConvert.SerializeObject(postCodaDocument);
                HttpContent content = new StringContent(json, Encoding.UTF8, "application/json");

@@ -2,6 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ex01.Views.AccountPage">
+    
+    
+    
     <ContentPage.Content>
         <StackLayout>
           
@@ -9,9 +12,11 @@
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
 
-            <Label Text="{Binding Name}"  VerticalOptions="Center" HorizontalOptions="Center"  ></Label>
+            <Label  x:Name="AccountName"   VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"  ></Label>
 
-            <Label Text="{Binding LoginId}"></Label>
+            <Label x:Name="AccountId" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"  ></Label>
+
+          
             
         </StackLayout>
        

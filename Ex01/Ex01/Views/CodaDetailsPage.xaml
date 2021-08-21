@@ -5,56 +5,31 @@
     <ContentPage.Content>
 
 
-        <Frame BackgroundColor="WhiteSmoke" Margin="8" Padding="0">
-            <Grid>
-                <ListView x:Name="lvwDocuments" SeparatorColor="White"   >
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell >
-                                <ViewCell.ContextActions >
-                                    <MenuItem Text="Here you can see my documents"  />
-
-
-                                </ViewCell.ContextActions >
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="45" />
-                                        <ColumnDefinition />
-
-
-                                    </Grid.ColumnDefinitions>
 
 
 
+        
+            <StackLayout>
+
+                <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+                <Label  x:Name="PageName"   VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"  ></Label>
+
+                <Label x:Name="PageSubtitle" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"  ></Label>
 
 
 
+            </StackLayout>
 
-
-                                    <Frame CornerRadius="7" Margin="8"  />
-                                    <Label Grid.Column="1" Text="{Binding Name}" TextColor="Black" FontSize="30" VerticalOptions="Center"  />
-                                    <Label Grid.Column="2" Text="{Binding CreatedAt}" TextColor="Black"  FontSize="15"  VerticalOptions="Center" Padding="0,0,0,0" />
-                                </Grid>
-
-                            </ViewCell>
-
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+       
 
 
 
 
 
-                
-
-            </Grid>
 
 
-
-        </Frame>
-
-     
-   
     </ContentPage.Content>
 </ContentPage>

@@ -41,7 +41,7 @@ namespace Ex01.Views
             CodaDocument newCodaDocument = new CodaDocument();
             newCodaDocument.Name  = name;
 
-           await CodaRepository.AddDocumentsAsync(newCodaDocument, "new document");
+           await CodaRepository.AddDocumentsAsync(name);
 
           await  Navigation.PopAsync();
                 

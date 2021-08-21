@@ -37,11 +37,12 @@ namespace Ex01.Views
 
         private  async void loadPage()
         {
-            //CodaPage codaSinglePage= await CodaRepository.GetCodaPageByIdAsync(MyDocument.Id, MyPage.Id);
+            CodaPageSingle  opgehaaldePagina = await CodaRepository.GetCodaPageByIdAsync(MyDocument.Id, MyPage.Id);
             //weergeven in de juiste 
-           // lvwPage.ItemsSource = codaSinglePage; 
-            
-          
+            PageName.Text = string.Concat("Name: ", opgehaaldePagina.Name);
+            PageSubtitle.Text = string.Concat("Subtitle: ", opgehaaldePagina.Subtitle);
+
+
         }
 
         private void btnGoBack_Clicked(object sender, EventArgs e)

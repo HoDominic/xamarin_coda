@@ -49,8 +49,8 @@ namespace Ex01
         {
             //test the GET Documents
 
-            Account account = await CodaRepository.GetAccountInfoAsync();
             
+
             Debug.WriteLine("test models");
             List<CodaDocument> codaDocuments = await CodaRepository.GetDocumentsAsync();
             foreach(CodaDocument d in codaDocuments)

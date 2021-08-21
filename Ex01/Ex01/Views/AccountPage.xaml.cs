@@ -1,4 +1,5 @@
-﻿using Ex01.Repositories;
+﻿using Ex01.Models;
+using Ex01.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,14 +17,29 @@ namespace Ex01.Views
         public AccountPage()
         {
             InitializeComponent();
+
+            LoadAccountInfo();
            
         }
 
-       
 
+
+
+        private async void LoadAccountInfo()
+        {
+            Account account = await CodaRepository.GetAccountInfoAsync();
+
+            AccountName.Text = string.Concat("Name: ", account.Name);
+            AccountId.Text = string.Concat("LoginId: ", account.LoginId);
+
+        }
 
 
       
+
+
+      
+
     }
     
 
