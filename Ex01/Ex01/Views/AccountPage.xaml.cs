@@ -31,6 +31,7 @@ namespace Ex01.Views
 
             AccountName.Text = string.Concat("Name: ", account.Name);
             AccountId.Text = string.Concat("LoginId: ", account.LoginId);
+            AccountType.Text = string.Concat("Account type: ", account.Type);
 
         }
 

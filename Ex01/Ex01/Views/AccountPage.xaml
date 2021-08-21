@@ -6,21 +6,22 @@
     
     
     <ContentPage.Content>
-        
-        
-            
-        
-        <StackLayout BackgroundColor="#F47562" Margin="0" Padding="5,10">
-          
-          
 
-            <Label  x:Name="AccountName"   TextColor="White" VerticalOptions="Center" HorizontalOptions="Start" FontSize="20"  ></Label>
+
+
+        <Grid >
+        <StackLayout BackgroundColor="#F47562" Margin="0" Padding="5,10">
+
+
+
+            <Label  x:Name="AccountName"   TextColor="White" VerticalOptions="Center" HorizontalOptions="Start" FontSize="20" Margin="0,200,0,0"  ></Label>
 
             <Label x:Name="AccountId"  TextColor="White" VerticalOptions="Center" HorizontalOptions="Start" FontSize="20"  ></Label>
 
+            <Label x:Name="AccountType"  TextColor="White" VerticalOptions="Center" HorizontalOptions="Start" FontSize="20"  ></Label>
           
             
         </StackLayout>
-        
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
