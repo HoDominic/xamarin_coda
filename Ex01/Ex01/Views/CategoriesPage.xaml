@@ -19,7 +19,7 @@
                    
                 </Frame>
                 <StackLayout VerticalOptions="EndAndExpand" Margin="15,15,15,65">
-                    <Label Text="Different types of documents." TextColor="#FFFFFF" FontSize="25" Margin="15" FontAttributes="None" />
+                    <Label Text="Different types of categories." TextColor="#FFFFFF" FontSize="25" Margin="15" FontAttributes="None" />
                     <Label Text="All in one document." TextColor="#FFFFFF" FontSize="25" Margin="15" FontAttributes="None" />
                 </StackLayout>
             </Grid>
