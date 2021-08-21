@@ -32,13 +32,13 @@ namespace Ex01.Views
 
             TapGestureRecognizer tapGestureRecognizer2 = new TapGestureRecognizer();
             tapGestureRecognizer2.Tapped += TapGestureRecognizer2_Tapped; ;
-            frmPage.GestureRecognizers.Add(tapGestureRecognizer2);
+            frmCategories.GestureRecognizers.Add(tapGestureRecognizer2);
 
         }
 
         private void TapGestureRecognizer2_Tapped(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Navigation.PushAsync(new CategoriesPage());
         }
 
         private void TapGestureRecognizer1_Tapped(object sender, EventArgs e)

@@ -19,6 +19,9 @@ namespace Ex01.Models
         [JsonProperty("name")]
         public String Name { get; set; }
 
+        [JsonProperty("type")]
+        public String Type { get; set; }
+
 
         [JsonProperty("subtitle")]
         public String Subtitle { get; set; }

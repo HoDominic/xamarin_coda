@@ -16,10 +16,10 @@ namespace Ex01.Views
         public AccountPage()
         {
             InitializeComponent();
-            
+           
         }
 
-
+       
 
 
 

@@ -41,6 +41,8 @@ namespace Ex01
             lvwDocuments.ItemsSource = await CodaRepository.GetDocumentsAsync();
         }
 
+    
+
 
 
         private async  Task TestModels()
@@ -90,6 +92,8 @@ namespace Ex01
 
 
         }
+
+      
 
 
         //uitvoeren wanneer we naar deze pagina gaan

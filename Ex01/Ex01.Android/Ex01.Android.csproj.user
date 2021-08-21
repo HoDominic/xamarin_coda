@@ -4,5 +4,6 @@
     <SelectedDevice>devprogii_1</SelectedDevice>
     <ActiveDebugProfile>devprogii_1</ActiveDebugProfile>
     <DefaultDevice>devprogii_1</DefaultDevice>
+    <AndroidDesignerPreferredTheme>MainTheme</AndroidDesignerPreferredTheme>
   </PropertyGroup>
 </Project>

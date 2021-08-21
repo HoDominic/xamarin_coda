@@ -53,11 +53,12 @@
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <Label Text="{Binding Name}" FontAttributes="Bold" VerticalOptions="Center" TextColor="#333333" FontSize="20" />
-                                    <Label Text="{Binding Subtitle}" FontAttributes="Bold" VerticalOptions="Center" TextColor="#333333" FontSize="20"  HorizontalOptions="End"/>
+                                    <Label Text="{Binding Subtitle}" FontAttributes="Italic" VerticalOptions="Center" TextColor="#333333" FontSize="20"  HorizontalOptions="End"/>
                               
                                     <StackLayout Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal">
 
                                         <Label Text="{Binding Id}" TextColor="#333333" FontSize="13"  VerticalOptions="Start" />
+                                        <Label Text="{Binding Type}" TextColor="#333333" FontSize="13"  VerticalOptions="Start"  FontAttributes="Bold"/>
                                        
                                        
                                     </StackLayout>

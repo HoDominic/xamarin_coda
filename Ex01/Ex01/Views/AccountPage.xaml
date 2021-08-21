@@ -6,10 +6,10 @@
         <StackLayout>
           
             <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
 
-            <Label Text="{Binding Name}"></Label>
+            <Label Text="{Binding Name}"  VerticalOptions="Center" HorizontalOptions="Center"  ></Label>
 
             <Label Text="{Binding LoginId}"></Label>
             
