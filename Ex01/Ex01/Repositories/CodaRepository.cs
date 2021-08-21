@@ -236,7 +236,7 @@ namespace Ex01.Repositories
         //PUT UpDate a Page
 
 
-        public async static Task UpdatePagesAsync(CodaPage updatedPage)
+        public async static Task UpdatePagesAsync(PutCodaPage updatedPage, string documentId, string PageId)
         {
             //deze methode voegt een nieuwe document toe 
             using (HttpClient client = await GetClient())
@@ -245,7 +245,7 @@ namespace Ex01.Repositories
 
                 //https://coda.io/apis/v1/docs/{docId}/pages
 
-                String url = _BASEURL + $"/docs/pages/{updatedPage.Id}";
+                String url = _BASEURL + $"/docs/{documentId}/pages/{PageId}";
 
 
                 try
@@ -264,7 +264,7 @@ namespace Ex01.Repositories
                     if (response.IsSuccessStatusCode == false)
                     {
 
-                        throw new Exception("Updaten van document niet geslaagd");
+                        throw new Exception("Updaten van pagina niet geslaagd");
                     }
                 }
                 catch (Exception ex)
@@ -335,7 +335,7 @@ namespace Ex01.Repositories
                     //json convert to list
                     if (json != null)
                     {
-                        //json --> List Documents
+                        //json --> List Categories
                         var categories = JsonConvert.DeserializeObject<Categories>(json);
                         return categories.CodaCategories;
 
