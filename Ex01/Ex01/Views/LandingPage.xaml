@@ -30,10 +30,10 @@
                     <Label Text="Documents" TextColor="#323232" FontAttributes="Bold" VerticalOptions="Center" Margin="16,0" />
                 </Frame>
                 <Frame x:Name="frmAccount" Grid.Row="1" Margin="1" Padding="0" OutlineColor="#F46A54" >
-                    <Label Text="Account Info" TextColor="#323232" FontAttributes="Bold" VerticalOptions="Center" Margin="16,0"/>
+                    <Label Text="Document Categories" TextColor="#323232" FontAttributes="Bold" VerticalOptions="Center" Margin="16,0"/>
                 </Frame>
                 <Frame x:Name="frmCategories" Grid.Row="2" Margin="1" Padding="0" OutlineColor="#F46A54" >
-                    <Label Text="Document Categories" TextColor="#323232" FontAttributes="Bold" VerticalOptions="Center" Margin="16,0"/>
+                    <Label Text="Account info" TextColor="#323232" FontAttributes="Bold" VerticalOptions="Center" Margin="16,0"/>
                 </Frame>
 
             </Grid>

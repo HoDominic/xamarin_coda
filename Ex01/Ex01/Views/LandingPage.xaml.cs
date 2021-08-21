@@ -38,12 +38,12 @@ namespace Ex01.Views
 
         private void TapGestureRecognizer2_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new CategoriesPage());
+            Navigation.PushAsync(new AccountPage());
         }
 
         private void TapGestureRecognizer1_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new AccountPage());
+            Navigation.PushAsync(new CategoriesPage());
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)

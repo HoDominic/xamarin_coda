@@ -6,19 +6,21 @@
     
     
     <ContentPage.Content>
-        <StackLayout>
+        
+        
+            
+        
+        <StackLayout BackgroundColor="#F47562" Margin="0" Padding="5,10">
           
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center" />
+          
 
-            <Label  x:Name="AccountName"   VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"  ></Label>
+            <Label  x:Name="AccountName"   TextColor="White" VerticalOptions="Center" HorizontalOptions="Start" FontSize="20"  ></Label>
 
-            <Label x:Name="AccountId" VerticalOptions="Center" HorizontalOptions="Center" FontSize="20"  ></Label>
+            <Label x:Name="AccountId"  TextColor="White" VerticalOptions="Center" HorizontalOptions="Start" FontSize="20"  ></Label>
 
           
             
         </StackLayout>
-       
+        
     </ContentPage.Content>
 </ContentPage>
