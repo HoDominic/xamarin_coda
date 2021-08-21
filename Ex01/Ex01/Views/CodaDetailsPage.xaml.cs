@@ -35,11 +35,11 @@ namespace Ex01.Views
 
 
 
-        private  void loadPage()
+        private  async void loadPage()
         {
             //CodaPage codaSinglePage= await CodaRepository.GetCodaPageByIdAsync(MyDocument.Id, MyPage.Id);
             //weergeven in de juiste 
-            //lvwPage.ItemsSource = codaSinglePage; (?)
+           // lvwPage.ItemsSource = codaSinglePage; 
             
           
         }

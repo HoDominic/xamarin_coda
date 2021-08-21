@@ -5,10 +5,10 @@
     <ContentPage.Content>
         <Grid VerticalOptions="Start" BackgroundColor="#F47562">
             <Grid.RowDefinitions>
-                <RowDefinition Height="200" />
-                <RowDefinition Height="200" />
-                <RowDefinition />
+                <RowDefinition Height="180" />
                 <RowDefinition Height="100" />
+                <RowDefinition />
+                <RowDefinition Height="150" />
             </Grid.RowDefinitions>
             
             <Label x:Name="lblDocument" Text="This will be your new document"  HorizontalOptions="Start" TextColor="White" FontSize="Large" Margin="19,4,8,8" Grid.Row="1" />
@@ -19,11 +19,12 @@
                   
                 </Grid.RowDefinitions>
 
-            
 
 
 
-                <Editor x:Name="editName" Keyboard="Text" FontSize="Medium"  HorizontalOptions="Fill"  Grid.Row="3" />
+
+                <Editor x:Name="editName" Keyboard="Text" FontSize="Medium"  HorizontalOptions="Fill"  Grid.Row="3" VerticalOptions="Fill" />
+                
             </Grid>
             <Grid Grid.Row="3" Margin="8,0,8,8">
                 <Grid.ColumnDefinitions>

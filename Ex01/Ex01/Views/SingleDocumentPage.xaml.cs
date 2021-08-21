@@ -36,7 +36,7 @@ namespace Ex01.Views
         private async void  btnSave_Clicked(object sender, EventArgs e)
         {
             //opslaan nieuwe CodaDocument
-            String name = editName.Text;
+            string name = editName.Text;
 
             CodaDocument newCodaDocument = new CodaDocument();
             newCodaDocument.Name  = name;

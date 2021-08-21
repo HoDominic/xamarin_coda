@@ -3,19 +3,70 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ex01.Views.CodaDocumentsPage">
     <ContentPage.Content>
-        <ListView x:Name="lvwCodaPages" RowHeight="50" SeparatorColor="Transparent" ItemSelected="lvwCodaPages_ItemSelected">
+        
+        
+        
+        
+        
+        
+        <!--<ListView x:Name="lvwCodaPages" RowHeight="50" SeparatorColor="Transparent" ItemSelected="lvwCodaPages_ItemSelected">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Frame BackgroundColor="WhiteSmoke" Margin="8" Padding="8,0">
+                        <Frame  BackgroundColor="white" Margin="8" Padding="8,0">
                             <Grid>
-                                <Label Text="{Binding Name}" TextColor="Black" VerticalOptions="Center" />
-                                <Label Text="..." TextColor="Gray" VerticalOptions="Center" HorizontalOptions="End" />
+                                <Label Text="{Binding Name}" TextColor="#323232" VerticalOptions="Center" />
+                                <Label Text="{Binding Subtitle}" TextColor="#323232" VerticalOptions="Center" HorizontalOptions="Center" />
                             </Grid>
                         </Frame>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </ListView>-->
+
+        <Grid>
+
+
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0" />
+                <RowDefinition />
+                <RowDefinition Height="0" />
+               
+            </Grid.RowDefinitions>
+
+
+
+            <ListView x:Name="lvwCodaPages" Grid.Row="1" BackgroundColor="#F47562" RowHeight="65" SeparatorColor="Transparent" ItemSelected="lvwCodaPages_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BackgroundColor="white" Margin="8" Padding="8,0">
+                                <Grid RowSpacing="0">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition />
+                                        <RowDefinition  />
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Name}" FontAttributes="Bold" VerticalOptions="Center" TextColor="#333333" FontSize="20" />
+                                    <Label Text="{Binding Subtitle}" FontAttributes="Bold" VerticalOptions="Center" TextColor="#333333" FontSize="20"  HorizontalOptions="End"/>
+                              
+                                    <StackLayout Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal">
+
+                                        <Label Text="{Binding Id}" TextColor="#333333" FontSize="13"  VerticalOptions="Start" />
+                                       
+                                       
+                                    </StackLayout>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

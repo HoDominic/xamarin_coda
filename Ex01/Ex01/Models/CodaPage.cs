@@ -11,7 +11,7 @@ namespace Ex01.Models
         [JsonProperty("items")]
         public List<CodaPage> CodaPages { get; set; }
 
-        public CodaPage CodaSinglePage { get; set; }
+        //public CodaPage CodaSinglePage { get; set; }
 
         [JsonProperty("id")]
         public String Id { get; set; }

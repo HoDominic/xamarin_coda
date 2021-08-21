@@ -11,9 +11,9 @@ C:\Users\domin\Desktop\MCT2\device_programming\xamarin_coda\Ex01\Ex01\obj\Debug\
 C:\Users\domin\Desktop\MCT2\device_programming\xamarin_coda\Ex01\Ex01\obj\Debug\netstandard2.0\Ex01.dll
 C:\Users\domin\Desktop\MCT2\device_programming\xamarin_coda\Ex01\Ex01\obj\Debug\netstandard2.0\ref\Ex01.dll
 C:\Users\domin\Desktop\MCT2\device_programming\xamarin_coda\Ex01\Ex01\obj\Debug\netstandard2.0\Ex01.pdb
-C:\Users\domin\Desktop\MCT2\device_programming\xamarin_coda\Ex01\Ex01\obj\Debug\netstandard2.0\Ex01.csprojAssemblyReference.cache
 C:\Users\domin\Desktop\MCT2\device_programming\xamarin_coda\Ex01\Ex01\obj\Debug\netstandard2.0\Views\CodaDocumentsPage.xaml.g.cs
 C:\Users\domin\Desktop\MCT2\device_programming\xamarin_coda\Ex01\Ex01\obj\Debug\netstandard2.0\Views\CodaDetailsPage.xaml.g.cs
 C:\Users\domin\Desktop\MCT2\device_programming\xamarin_coda\Ex01\Ex01\obj\Debug\netstandard2.0\Views\SingleDocumentPage.xaml.g.cs
 C:\Users\domin\Desktop\MCT2\device_programming\xamarin_coda\Ex01\Ex01\obj\Debug\netstandard2.0\Views\LandingPage.xaml.g.cs
 C:\Users\domin\Desktop\MCT2\device_programming\xamarin_coda\Ex01\Ex01\obj\Debug\netstandard2.0\Views\AccountPage.xaml.g.cs
+C:\Users\domin\Desktop\MCT2\device_programming\xamarin_coda\Ex01\Ex01\obj\Debug\netstandard2.0\Ex01.csprojAssemblyReference.cache

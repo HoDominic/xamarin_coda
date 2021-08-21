@@ -42,6 +42,8 @@ namespace Ex01.Views
             List<CodaPage>codaPages = await CodaRepository.GetPagesAsync(MyDocument.Id);
             //weergeven in de juiste listView
             lvwCodaPages.ItemsSource = codaPages;
+
+
         }
 
 
