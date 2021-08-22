@@ -33,7 +33,7 @@
 
 
             <Grid Grid.Row="2">
-                <StackLayout BackgroundColor="#F46A54" > 
+                <StackLayout BackgroundColor="#F46A54" Padding="5,10" > 
 
 
 
