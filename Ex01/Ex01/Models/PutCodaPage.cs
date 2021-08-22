@@ -8,6 +8,9 @@ namespace Ex01.Models
     public class PutCodaPage
     {
 
+        [JsonProperty("id")]
+        public string Id { get; set; }
+
         [JsonProperty("name")]
         public string Name { get; set; }
 
