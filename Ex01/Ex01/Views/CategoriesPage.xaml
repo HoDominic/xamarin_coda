@@ -15,8 +15,8 @@
             
 
             <Grid Grid.Row="1">
-                <Frame Padding="0" BackgroundColor="#F46A54">
-                   
+                <Frame Padding="0" BackgroundColor="Black">
+                    <Image Opacity ="0.8" Source="https://miro.medium.com/max/2000/1*E3WLLJIvRrhAPAW-8m54TQ.png"  Aspect="AspectFill"></Image>
                 </Frame>
                 <StackLayout VerticalOptions="EndAndExpand" Margin="15,15,15,65">
                     <Label Text="Different types of categories." TextColor="#FFFFFF" FontSize="25" Margin="15" FontAttributes="None" />

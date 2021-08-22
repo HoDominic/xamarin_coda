@@ -12,7 +12,7 @@
             </Grid.RowDefinitions>
             <Grid >
             <Frame Padding="0" BackgroundColor="Black">
-            <Image Opacity="0.5" Source=" https://thumb.tildacdn.com/tild3065-3064-4232-b534-633362373638/-/format/webp/coda_people.png" Aspect="AspectFill"/>
+            <Image Opacity="0.75" Source=" https://thumb.tildacdn.com/tild3065-3064-4232-b534-633362373638/-/format/webp/coda_people.png" Aspect="AspectFill"/>
             </Frame>
             <StackLayout VerticalOptions="EndAndExpand" Margin="15,15,15,65">
                 <Label Text="The doc that brings everything together" TextColor="#FFFFFF" FontSize="25" Margin="15" FontAttributes="None" /> 
